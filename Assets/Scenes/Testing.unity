@@ -2765,7 +2765,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.05333333
+  m_VoxelSize: 0.11000001
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 7eb62bf994250a4468225b831066fe6d, type: 2}
   m_BuildHeightMesh: 0
@@ -6898,37 +6898,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 330585545}
   navMeshAgent: {fileID: 1653748501}
-  playerAnimator: {fileID: 1653748503}
+  playerAnimator: {fileID: 1653748505}
   targetDestination: {fileID: 1481694212}
---- !u!95 &1653748503
+--- !u!95 &1653748505 stripped
 Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
+  m_PrefabInstance: {fileID: 1659326901}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653748500}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
-  m_Controller: {fileID: 9100000, guid: bfde157a4a81ce044b5238f5481e0cd9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom
-    animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1659326901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6997,13 +6973,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Remy
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bfde157a4a81ce044b5238f5481e0cd9, type: 2}
+    - target: {fileID: 5866666021909216657, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1653748503}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d7e2c1f25896fdc4eb39d26c7d0cb870, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1653748502}
