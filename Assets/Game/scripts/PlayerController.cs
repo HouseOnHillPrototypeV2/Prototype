@@ -25,20 +25,20 @@ public class PlayerController : MonoBehaviour
               }
           }
   
-          // Calculate the player's speed
-          float speed = navMeshAgent.velocity.magnitude;
+        
   
           // Update the animator parameters based on the speed
-          if (speed > 0f)
+          if (navMeshAgent.velocity != Vector3.zero)
           {
               playerAnimator.SetBool("isWalking", true);
-              playerAnimator.SetFloat("Speed", speed);
+             
           }
-          else
+          else if (navMeshAgent.velocity == Vector3.zero)
           {
               playerAnimator.SetBool("isWalking", false);
-              playerAnimator.SetFloat("Speed", speed);
+             
           }
+         
   
           // Set the speed in the animator as a float parameter for blending
          
