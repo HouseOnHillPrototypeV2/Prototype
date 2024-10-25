@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class InventoryUi : Singelton<InventoryUi>
@@ -11,12 +12,14 @@ public class InventoryUi : Singelton<InventoryUi>
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private InventorySlot slotPrefab;
     [SerializeField] private Transform container;
+    [SerializeField] private NavMeshAgent _agent;
 
     [Header("Description Panel")]
     [SerializeField] private GameObject descriptionPanel;
     [SerializeField] private Image itemIcon;
     [SerializeField] private TextMeshProUGUI itemNameTMP;
     [SerializeField] private TextMeshProUGUI itemDescriptionTMP;
+    
 
     public InventorySlot CurrentSlot { get; set; }
     
@@ -81,8 +84,17 @@ public class InventoryUi : Singelton<InventoryUi>
     public void OpenCloseInventory()
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-        if (inventoryPanel.activeSelf == false)
+
+        // Check if inventory is open or closed
+        if (inventoryPanel.activeSelf)
         {
+            // Inventory is open, disable player movement
+            _agent.isStopped = true;
+        }
+        else
+        {
+            // Inventory is closed, re-enable player movement
+            _agent.isStopped = false;
             descriptionPanel.SetActive(false);
             CurrentSlot = null;
         }
