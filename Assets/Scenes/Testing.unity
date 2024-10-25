@@ -5425,6 +5425,7 @@ MonoBehaviour:
   inventoryPanel: {fileID: 365274505}
   slotPrefab: {fileID: 9140064407061663714, guid: baab81dd98b2cc24e93b1f4126c9fe69, type: 3}
   container: {fileID: 259342261}
+  _agent: {fileID: 1653748501}
   descriptionPanel: {fileID: 230442282}
   itemIcon: {fileID: 1569454108}
   itemNameTMP: {fileID: 925217269}
